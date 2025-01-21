@@ -70,6 +70,22 @@ header {
     border-radius: 10px;
     font-weight: 700;
 }
+.login-btn {
+    background-color: rgb(255, 211, 115) !important; /* Set background color */
+    border-color: rgb(255, 211, 115) !important;    /* Set border color */
+    color: #000 !important; /* Set text color */
+    font-weight: bold; /* Make the text bold */
+    padding: 0.5rem 1rem; /* Add padding for a better appearance */
+    border-radius: 5px; /* Optional: Rounded corners */
+    text-transform: uppercase; /* Optional: Transform text to uppercase */
+}
+
+.login-btn:hover {
+    background-color: rgb(255, 190, 95) !important; /* Darker shade for hover */
+    border-color: rgb(255, 190, 95) !important;
+    color: #000 !important;
+}
+
 
 /* Profile Section */
 .profile {

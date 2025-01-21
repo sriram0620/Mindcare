@@ -5,76 +5,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'issues.css' %}">
     <title>Mental Health Issues</title>
+    <link rel="stylesheet" href="{% static 'issues.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            animation: fadeInDown 2s ease-in-out;
+        }
+
+        section {
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2:hover {
+            transition: all 0.5s ease;
+            color: rgb(255, 211, 115);
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Mental Health Issues</h1>
         <p class="tagline">“It’s okay not to be okay, You'll heal.”</p>
     </header>
-    <hr>
-    <section>
-        <h2>Mental Health</h2>
-        <p>Mental health plays a vital role in shaping our overall well-being, influencing how we think, 
-        feel, and behave daily. It encompasses our emotional, psychological, and social state and 
-        determines how we handle stress, relate to others, and make choices in life. Unlike 
-        physical health, which is often visible and easier to assess, mental health can be more 
-        complex and challenging to understand due to its intangible nature. However, just like 
-        physical health, maintaining mental well-being is essential for leading a balanced and 
-        fulfilling life.</p>
+    <hr class="my-4">
+    
+    <section class="container mt-4">
+        <h2 class="text-center">Mental Health</h2>
+        <p class="text-justify">Mental health plays a vital role in shaping our overall well-being, influencing how we think, feel, and behave daily. It encompasses our emotional, psychological, and social state and determines how we handle stress, relate to others, and make choices in life. Unlike physical health, which is often visible and easier to assess, mental health can be more complex and challenging to understand due to its intangible nature. However, just like physical health, maintaining mental well-being is essential for leading a balanced and fulfilling life.</p>
     </section>
-    <section>
+
+    <section class="container mt-4">
         <h2>The Importance of Mental Health</h2>
-        <p>Good mental health is much more than the absence of mental illness. It is the foundation 
-        for thriving in our personal lives, careers, and relationships. It enables us to cope with life's 
-        challenges, recover from setbacks, adapt to change, and engage meaningfully with others. 
-        When mental health is impaired, it can affect every aspect of life, leading to emotional 
-        distress, dysfunctional behavior, and diminished productivity.</p>
-        <p>Mental health issues, also referred to as mental health disorders or conditions, range in 
-        severity and can affect anyone at any point in their lives. Some individuals experience brief 
-        episodes of mental health struggles, while others may live with chronic conditions that 
-        require long-term care and support. These issues do not discriminate based on age, 
-        gender, ethnicity, or socioeconomic status, making mental health a universal concern.</p>
+        <p>Good mental health is much more than the absence of mental illness. It is the foundation for thriving in our personal lives, careers, and relationships. It enables us to cope with life's challenges, recover from setbacks, adapt to change, and engage meaningfully with others. When mental health is impaired, it can affect every aspect of life, leading to emotional distress, dysfunctional behavior, and diminished productivity.</p>
+        <p>Mental health issues, also referred to as mental health disorders or conditions, range in severity and can affect anyone at any point in their lives. Some individuals experience brief episodes of mental health struggles, while others may live with chronic conditions that require long-term care and support. These issues do not discriminate based on age, gender, ethnicity, or socioeconomic status, making mental health a universal concern.</p>
     </section>
-    <section>
+
+    <section class="container mt-4">
         <h2>The Global Perspective on Mental Health</h2>
-        <p>Mental health issues are among the leading causes of disability and ill health worldwide. 
-        According to the World Health Organization (WHO), an estimated 1 in 4 people globally will 
-        experience a mental health condition at some point in their lives. Despite the prevalence, 
-        mental health is still surrounded by stigma, misunderstanding, and discrimination, often 
-        discouraging people from seeking help or talking openly about their struggles.</p>
-        <p>The global COVID-19 pandemic further highlighted the importance of mental health. The 
-        isolation, uncertainty, and fear surrounding the pandemic led to a significant increase in 
-        mental health issues such as anxiety, depression, and stress. This has pushed mental 
-        health to the forefront of public health conversations and emphasized the need for better 
-        resources, support systems, and mental health care access.</p>
+        <p>Mental health issues are among the leading causes of disability and ill health worldwide. According to the World Health Organization (WHO), an estimated 1 in 4 people globally will experience a mental health condition at some point in their lives. Despite the prevalence, mental health is still surrounded by stigma, misunderstanding, and discrimination, often discouraging people from seeking help or talking openly about their struggles.</p>
+        <p>The global COVID-19 pandemic further highlighted the importance of mental health. The isolation, uncertainty, and fear surrounding the pandemic led to a significant increase in mental health issues such as anxiety, depression, and stress. This has pushed mental health to the forefront of public health conversations and emphasized the need for better resources, support systems, and mental health care access.</p>
     </section>
-    <section>
+
+    <section class="container mt-4">
         <h2>The Evolution of Mental Health Understanding</h2>
-        <p>Historically, mental health issues were misunderstood and stigmatized. People with 
-        mental health problems were often shunned, institutionalized, or subjected to harmful 
-        treatments. However, over the past century, there has been significant progress in 
-        understanding mental health conditions, thanks to advances in medical research, 
-        neuroscience, and psychology.</p>
-        <p>The shift from seeing mental illness as a personal weakness to understanding it as a health 
-        condition has helped reduce stigma. Modern approaches now recognize the complexity of 
-        mental health and the various factors that contribute to it, including genetics, biology, life 
-        experiences, and environmental influences.</p>
+        <p>Historically, mental health issues were misunderstood and stigmatized. People with mental health problems were often shunned, institutionalized, or subjected to harmful treatments. However, over the past century, there has been significant progress in understanding mental health conditions, thanks to advances in medical research, neuroscience, and psychology.</p>
+        <p>The shift from seeing mental illness as a personal weakness to understanding it as a health condition has helped reduce stigma. Modern approaches now recognize the complexity of mental health and the various factors that contribute to it, including genetics, biology, life experiences, and environmental influences.</p>
     </section>
-    <section>
+
+    <section class="container mt-4">
         <h2>Mental Health as a Priority</h2>
-        <p>In recent years, mental health awareness has grown significantly. Governments, 
-        organizations, and advocacy groups worldwide are emphasizing the importance of mental 
-        health care. Campaigns to raise awareness, educate the public, and promote mental well 
-        being are increasingly common. Efforts to integrate mental health into primary care, 
-        workplaces, and educational institutions are aimed at normalizing conversations around 
-        mental health and providing early interventions for those in need.</p>
-        <p>Ultimately, mental health is a crucial component of overall health, affecting our capacity to 
-        live meaningful, connected, and productive lives. Addressing mental health issues 
-        requires collective effort, compassionate understanding, and accessible support systems 
-        for individuals facing these challenges.</p>
+        <p>In recent years, mental health awareness has grown significantly. Governments, organizations, and advocacy groups worldwide are emphasizing the importance of mental health care. Campaigns to raise awareness, educate the public, and promote mental well-being are increasingly common. Efforts to integrate mental health into primary care, workplaces, and educational institutions are aimed at normalizing conversations around mental health and providing early interventions for those in need.</p>
+        <p>Ultimately, mental health is a crucial component of overall health, affecting our capacity to live meaningful, connected, and productive lives. Addressing mental health issues requires collective effort, compassionate understanding, and accessible support systems for individuals facing these challenges.</p>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
     <h3>Types of Disorders</h3>
     <hr>

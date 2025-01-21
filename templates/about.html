@@ -1,123 +1,260 @@
+
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'about.css' %}">
     <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #505050;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            /* background-color: rgb(255, 211, 115); */
+            text-align: center;
+            padding: 20px;
+            animation: fadeInDown 2s ease-in-out;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-section {
+            margin: 20px auto;
+            max-width: 800px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .about-section p {
+            line-height: 1.6;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .core-values {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: rgb(255, 211, 115);
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .core-values h2 {
+            font-size: 32px;
+            color: #505050;
+            margin-bottom: 20px;
+        }
+
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .value-item {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-item img {
+            max-width: 100px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-item h3 {
+            font-size: 20px;
+            color: #505050;
+            margin-bottom: 10px;
+        }
+
+        .value-item p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .team-members {
+            text-align: center;
+            margin-top: 40px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .team-members .member {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .team-members .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .team-members .profile-pic:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .values-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-      <div class="hidden">
-        <img src="{% static 'm.jpg/Aboutus.png' %}" alt="AboutUS" width="650px" height="210px">
-      </div>
+        <img src="{% static 'm.jpg/Aboutus.png' %}" alt="About Us">
     </header>
+
     <hr>
-<section class="about-section">
-    <div class="about-text">
-      <p>MindCare is dedicated to enhancing the mental health experience within various institutions. We focus on optimizing mental health resource accessibility and providing valuable insights for a well-rounded mental well-being regimen. Founded with a vision to streamline mental health management processes, MindCare began its journey as a solution to bridge the gap between individuals and quality mental health resources.</p>
-      <p>Having served numerous prestigious institutions, our clientele includes organizations renowned for their commitment to mental health excellence. We take pride in our strong partnerships with these establishments.</p>
-    </div>
-</section>
 
-<section class="core-values">
-    <h2>Our Core Values</h2>
-    <p>At the heart of our mental health platform, we believe in upholding values that reflect our commitment to improving lives through compassion, care, and effective methods. Our core values guide every aspect of the services we provide.</p>
-    
-    <div class="values-container">
-      <div class="value-item">
-        <img src="{% static 'm.jpg/usercentric.png' %}" alt="User-Centric Approach">
-        <h3>User-Centric Approach</h3>
-        <p>We prioritize the needs and experiences of our users, ensuring that all resources are tailored to enhance personal well-being and provide support that is relevant and accessible.</p>
-      </div>
-      
-      <div class="value-item">
-        <img src="{% static 'm.jpg/kindness.png' %}" alt="Kindness">
-        <h3>Kindness</h3>
-        <p>Kindness is the foundation of our interactions. We approach every individual with empathy, offering a safe and welcoming environment for users to explore their mental health journey.</p>
-      </div>
-      
-      <div class="value-item">
-        <img src="{% static 'm.jpg/care.jpg' %}" alt="Care">
-        <h3>Care</h3>
-        <p>We deeply care about the well-being of each user. Our platform is built to provide genuine support, encouraging individuals to seek help and find comfort in knowing that care is at the core of what we do.</p>
-      </div>
-      
-      <div class="value-item">
-        <img src="{% static 'm.jpg/optimal.jpg' %}" alt="Optimal Approaches">
-        <h3>Optimal Approaches</h3>
-        <p>We leverage the best practices in mental health support, utilizing evidence-based strategies and cutting-edge tools to ensure users receive the most effective guidance and resources.</p>
-      </div>
-    </div>
-  </section>
+    <section class="about-section ">
+        <p>MindCare is dedicated to enhancing the mental health experience within various institutions. We focus on optimizing mental health resource accessibility and providing valuable insights for a well-rounded mental well-being regimen. Founded with a vision to streamline mental health management processes, MindCare began its journey as a solution to bridge the gap between individuals and quality mental health resources.</p>
+        <p>Having served numerous prestigious institutions, our clientele includes organizations renowned for their commitment to mental health excellence. We take pride in our strong partnerships with these establishments.</p>
+    </section>
 
-    <div class="team-members">
-      <div class="member">
-        <img src="../static/m.jpg/mypic.jpg" alt="surya" class="profile-pic" style="height: 150px;">
-        <p>P. Surya Sri Rama Murthy - <a href="https://www.linkedin.com/in/surya-sri-rama-murthy-pilla/" target="_blank">LinkedIn Profile</a></p>
-      </div>
-    <div>
-   
-</section>
-<footer class="footer">
-  <div class="footer-container">
-      <!-- About Section
-      <div class="footer-about">
-          <h3>MindCare</h3>
-          <p>Your go-to platform for mental health and wellness. We provide personalized resources and support to help you on your journey to better mental well-being.</p>
-      </div> -->
+    <section class="core-values">
+        <h2>Our Core Values</h2>
+        <p>At the heart of our mental health platform, we believe in upholding values that reflect our commitment to improving lives through compassion, care, and effective methods. Our core values guide every aspect of the services we provide.</p>
 
-      <!-- Quick Links -->
-      <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-          </ul>
-      </div>
+        <div class="values-container">
+            <div class="value-item">
+                <img src="{% static 'm.jpg/usercentric.png' %}" alt="User-Centric Approach">
+                <h3>User-Centric Approach</h3>
+                <p>We prioritize the needs and experiences of our users, ensuring that all resources are tailored to enhance personal well-being and provide support that is relevant and accessible.</p>
+            </div>
 
-      <!-- Contact Section -->
-      <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <p>Email: support@mindcare.com</p>
-          <p>Phone: +123-456-7890</p>
-          <p>Address: 123 Wellness Ave, Healthy City</p>
-      </div>
+            <div class="value-item">
+                <img src="{% static 'm.jpg/kindness.png' %}" alt="Kindness">
+                <h3>Kindness</h3>
+                <p>Kindness is the foundation of our interactions. We approach every individual with empathy, offering a safe and welcoming environment for users to explore their mental health journey.</p>
+            </div>
 
-      <!-- Social Media Links -->
-      <div class="social-icons">
-          <h2>
-              Follow us 
-          </h2>
-          <a href="https://www.facebook.com" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-              </svg>
-          </a>
-          <a href="https://www.twitter.com" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
-              </svg>
-          </a>
-          <a href="https://www.instagram.com" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-              </svg>
-          </a>
-          <a href="https://www.google.com" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
-                  <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
-              </svg>
-          </a>
-      </div>
-  </div>
+            <div class="value-item">
+                <img src="{% static 'm.jpg/care.jpg' %}" alt="Care">
+                <h3>Care</h3>
+                <p>We deeply care about the well-being of each user. Our platform is built to provide genuine support, encouraging individuals to seek help and find comfort in knowing that care is at the core of what we do.</p>
+            </div>
 
-  <div class="footer-bottom">
-      <p>&copy; 2024 MindCare. All Rights Reserved.</p>
-  </div>
-</footer>
-</body>
+            <div class="value-item">
+                <img src="{% static 'm.jpg/optimal.jpg' %}" alt="Optimal Approaches">
+                <h3>Optimal Approaches</h3>
+                <p>We leverage the best practices in mental health support, utilizing evidence-based strategies and cutting-edge tools to ensure users receive the most effective guidance and resources.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer  text-dark py-5">
+      <div class="container">
+          <div class="row">
+              <!-- About Section -->
+              <div class="col-md-4">
+                  <h3 class="mb-3">About MindCare</h3>
+                  <p class="text-muted">MindCare is dedicated to enhancing mental well-being through accessible resources and innovative solutions. Our mission is to bridge the gap between individuals and quality mental health support.</p>
+              </div>
+  
+              <!-- Quick Links Section -->
+              <div class="col-md-4">
+                  <h3 class="mb-3">Quick Links</h3>
+                  <ul class="list-unstyled">
+                      <li><a href="#" class="text-dark text-decoration-none">Home</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">About Us</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">Services</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">Blog</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">Contact</a></li>
+                  </ul>
+              </div>
+  
+              <!-- Contact Section -->
+              <div class="col-md-4">
+                  <h3 class="mb-3">Contact Us</h3>
+                  <p class="text-muted mb-1">Email: support@mindcare.com</p>
+                  <p class="text-muted mb-1">Phone: +123-456-7890</p>
+                  <p class="text-muted">Address: 123 Wellness Ave, Healthy City</p>
+  
+                  <!-- Social Media Section -->
+                  <div class="mt-3">
+                      <h4 class="mb-2">Follow Us</h4>
+                      <a href="https://www.facebook.com" target="_blank" class="me-3 text-dark">
+                          <i class="bi bi-facebook fs-4"></i>
+                      </a>
+                      <a href="https://www.twitter.com" target="_blank" class="me-3 text-dark">
+                          <i class="bi bi-twitter fs-4"></i>
+                      </a>
+                      <a href="https://www.instagram.com" target="_blank" class="me-3 text-dark">
+                          <i class="bi bi-instagram fs-4"></i>
+                      </a>
+                      <a href="https://www.google.com" target="_blank" class="me-3 text-dark">
+                          <i class="bi bi-google fs-4"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Team Members Section -->
+          <div class="row mt-5">
+              <div class="col text-center">
+                  <h4 class="mb-4">Meet Our Team</h4>
+                  <div class="d-inline-block text-center">
+                      <img src="{% static 'm.jpg/mypic.jpg' %}" alt="P. Surya Sri Rama Murthy" class="rounded-circle" style="width: 120px; height: 120px;">
+                      <p class="mt-2">P. Surya Sri Rama Murthy - <a href="https://www.linkedin.com/in/surya-sri-rama-murthy-pilla/" target="_blank" class="text-dark">LinkedIn Profile</a></p>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Footer Bottom -->
+          <div class="row mt-4">
+              <div class="col text-center">
+                  <p class="text-muted">&copy; 2024 MindCare. All Rights Reserved.</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  
+  <!-- Add Bootstrap Icons CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+  
