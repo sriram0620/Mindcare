@@ -1,15 +1,7 @@
 * {
     background-color: rgb(255, 255, 255);
 }
-body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding-left: 100px;
-    padding-right: 100px;
-}
+
 header {
     background-color: rgb(255, 211, 115);
     border-radius: 15px;
