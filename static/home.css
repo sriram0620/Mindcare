@@ -47,11 +47,18 @@ header {
 }
 
 /* Navbar */ 
-.navbar ul {
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+    position: sticky;
+}
+/* .navbar ul {
     display: flex;
     list-style: none;
     gap: 20px;
-}
+} */
 
 .navbar ul li {
     position: relative;
@@ -134,31 +141,13 @@ header {
     background-color: #ddd;
 }
 
-.show {
-    display: block;
-    margin-right: 100px;
-    margin-top: 150px;
-}
+
 
 /* Responsiveness */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
 
 
-.hero {
-    margin-top: 50px;
-    display: flex;
-    height: 800px;
-    justify-content: space-between;
-    align-items: center;
-}
-.homepage-image{
-    margin-left:230px;
-}
+
+
 
 .hero-content{
     display: flex;
