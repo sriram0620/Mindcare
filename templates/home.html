@@ -172,7 +172,7 @@
         </nav>
     </header>
     
-    <section class="hero">
+    <section class="hero bg-white">
         <div>
             <img src="{% static 'm.jpg/home pic.jpeg' %}" class ="homepage-image">
         </div>
@@ -190,7 +190,7 @@
                 <p>Welcome to <strong>MindCare</strong>, lets start with a quiz</p>
                 {% endif%}
             </div>
-            <div class="hero-element">
+            <div class="hero-element text-secondary">
                 <a href="{% url 'quiz' %}">Take the Quiz</a>
             </div>
         </div>
@@ -325,9 +325,9 @@
                         <div class="article-image">
                             <img src="{% static 'm.jpg/download.jpg' %}" alt="Anxiety">
                         </div>
-                        <div class="article-content">
+                        <div class="article-content text-center overflow-hidden">
                             <h3>Understanding Anxiety</h3>
-                            <p>Anxiety is a feeling of fear, dread, and uneasiness that can be caused by the anticipation of danger. It can be a normal reaction to stress...</p>
+                            <p>Anxiety is a feeling of fear, dread, and uneasiness.</p>
                         </div>
                     </div>
                 </div>
@@ -338,7 +338,7 @@
                         </div>
                         <div class="article-content">
                             <h3>Managing Depression</h3>
-                            <p>Depression can be treated with a combination of psychotherapy, medication, and other approaches. The right treatment depends on your needs...</p>
+                            <p>Depression can be treated with a combination of psychotherapy.</p>
                         </div>
                     </div>
                 </div>
@@ -349,7 +349,7 @@
                         </div>
                         <div class="article-content">
                             <h3>Mindfulness Techniques</h3>
-                            <p>Mindfulness is a type of meditation in which you focus on being intensely aware of what you're sensing and feeling in the moment...</p>
+                            <p>Mindfulness is a type of meditation.</p>
                         </div>
                     </div>
                 </div>
@@ -363,9 +363,9 @@
 
     </section>
     <section id = "Recommend" class = "Recommend">
-    <div class = "Recommendation">
+    <div class = "Recommendation m-5">
         <h1> Checkout </h1>
-        <hr>
+        <!-- <hr> -->
     </div>
     </section>
     <section style="background-color:rgb(250, 250, 250);">
@@ -380,13 +380,12 @@
             ">
                 <div style="
                 margin-top: 250px;
-                margin-left: 200px;
                     ">
-                    <h2>Wanna try our new AI Chatbot ???</h2>
+                    <h2 class="">Wanna try our new AI Chatbot ???</h2>
                 </div>
                 <div style="
                 margin-top: 10px;
-                margin-left: 200px;
+                margin-left: 0px;
                 ">
                 
                     <button 
@@ -405,8 +404,8 @@
 
     <section id="nutrition" class="nutrition-section">
         <div class="container">
-            <div class = "nutrition-header">
-                <div>
+            <div class = "nutrition-header pt-5">
+                <div class="m-5">
                     <h2>Mental Health Issues</h2> 
                 </div>
                 <div>
@@ -513,7 +512,7 @@
     </section>
     
 
-    <section id="quiz" class="quiz-section">
+    <section id="quiz" class="quiz-section m-5">
         <div class="quiz-container">
             <div  class="quiz-elements">
                 <h2>Mental Health Quiz</h2>
@@ -522,7 +521,7 @@
                 <p>Take our survey to assess your mental health and get personalized recommendations.</p>
             </div>
             <div  class="quiz-elements">
-                <a href="{% url 'quiz' %}" >click here to take the quiz</a>
+                <a href="{% url 'quiz' %}" ><h4>click here to take the quiz</h4></a>
             </div>
         </div>
     </section>
